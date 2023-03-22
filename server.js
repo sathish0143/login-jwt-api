@@ -24,3 +24,21 @@ app.use("/api", routes);
 app.listen(port, () => {
   console.log(`Server Created port: http://localhost:${port}`);
 });
+
+//!default err message
+app.get("*", (req, res) => {
+  res.status(404);
+  res.json({
+    gettall: "api/user/all",
+    signup: "api/user/signup",
+    login: "api/user/login",
+  });
+});
+app.post("*", (req, res) => {
+  res.status(404);
+  res.json({
+    gettall: "api/user/all",
+    signup: "api/user/signup",
+    login: "api/user/login",
+  });
+});
