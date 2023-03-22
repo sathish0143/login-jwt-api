@@ -16,22 +16,4 @@ mongoose
 
 routes.use("/user", user);
 
-//!default err message
-routes.get("*", (req, res) => {
-  res.status(404);
-  res.json({
-    gettall: "api/user/all",
-    signup: "api/user/signup",
-    login: "api/user/login",
-  });
-});
-routes.post("*", (req, res) => {
-  res.status(404);
-  res.json({
-    gettall: "api/user/all",
-    signup: "api/user/signup",
-    login: "api/user/login",
-  });
-});
-
 module.exports = routes;
