@@ -19,11 +19,19 @@ routes.use("/user", user);
 //!default err message
 routes.get("*", (req, res) => {
   res.status(404);
-  res.send("sorry bro... url not supported");
+  res.json({
+    gettall: "api/user/all",
+    signup: "api/user/signup",
+    login: "api/user/login",
+  });
 });
 routes.post("*", (req, res) => {
   res.status(404);
-  res.send("sorry bro..enter correct url");
+  res.json({
+    gettall: "api/user/all",
+    signup: "api/user/signup",
+    login: "api/user/login",
+  });
 });
 
 module.exports = routes;

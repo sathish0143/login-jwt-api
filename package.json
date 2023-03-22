@@ -4,8 +4,8 @@
   "description": "assessment of jwt token",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon ./node_modules/.bin/netlify-lambda serve src",
+    "build": "node ./node_modules/.bin/netlify-lambda build src"
   },
   "author": "Sathish",
   "license": "ISC",
@@ -16,8 +16,11 @@
     "express": "^4.18.2",
     "flatted": "^3.2.7",
     "jsonwebtoken": "^9.0.0",
+    "latest": "^0.2.0",
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.0",
-    "nodemon": "^2.0.20"
+    "netlify-lambda": "^2.0.16",
+    "nodemon": "^2.0.21",
+    "serverless-http": "^3.1.1"
   }
 }

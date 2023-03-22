@@ -1,6 +1,5 @@
 const express = require("express");
-const path = require("path");
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8090;
 const app = express();
 const routes = require("./routes");
 const bodyParser = require("body-parser");
@@ -19,7 +18,7 @@ app.use((req, res, next) => {
 });
 
 //!router callback function
-app.use("/", routes);
+app.use("/api", routes);
 
 //!server creation
 app.listen(port, () => {
