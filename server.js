@@ -29,16 +29,40 @@ app.listen(port, () => {
 app.get("*", (req, res) => {
   res.status(404);
   res.json({
-    gettall: "api/user/all",
-    signup: "api/user/signup",
-    login: "api/user/login",
+    ERROR: "URL NOT FOUND",
+    view_Users: {
+      path: "api/user/all",
+      note: "You need to login first to view content",
+    },
+    signup: {
+      path: "api/user/signup",
+      note: `Signup using below format`,
+      body: { username: "xxx", password: "xxx", email: "xxx@gmail.com" },
+    },
+    login: {
+      path: "api/user/login",
+      note: `Login using below format `,
+      body: { username: "xxx", password: "xxx" },
+    },
   });
 });
 app.post("*", (req, res) => {
   res.status(404);
   res.json({
-    gettall: "api/user/all",
-    signup: "api/user/signup",
-    login: "api/user/login",
+    ERROR: "URL NOT FOUND",
+    view_Users: {
+      path: "api/user/all",
+      note: "You need to login first to view content",
+    },
+    signup: {
+      path: "api/user/signup",
+      note: `Signup using below format`,
+      body: { username: "xxx", password: "xxx", email: "xxx@gmail.com" },
+    },
+    login: {
+      path: "api/user/login",
+      note: `Login using below format `,
+      body: { username: "xxx", password: "xxx" },
+    },
   });
 });
